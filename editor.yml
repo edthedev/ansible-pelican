@@ -1,0 +1,6 @@
+---
+- name: vim
+  apt: name={{ item }}
+  sudo: yes
+  with_items:
+    - vim
