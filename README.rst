@@ -31,7 +31,7 @@ You may also want to enable a graphical interface to the Virtual Machine.::
     
     vim Vagrantfile
       config.vm.provider "virtualbox" do |v|
-        v.gui = True
+        v.gui = true
       end
 
 Now create the Virtual Machine, will all Pelican requirements satisfied.::
