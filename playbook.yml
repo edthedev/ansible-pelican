@@ -1,0 +1,15 @@
+---
+- hosts: all
+  user: vagrant
+  gather_facts: False
+  sudo: no
+  vars:
+    - root_dir: /home/vagrant
+  tasks:
+    - name: req for pelican
+      apt: name={{ item }}
+      with_items:
+        - python
+        - python-setuptools
+    - name: pelican
+      easy_install: pelican
