@@ -5,11 +5,13 @@
   sudo: no
   vars:
     - root_dir: /home/vagrant
+    - blog_repo: git@bitbucket.org:edthedev/blog.git
   tasks:
     - name: req for pelican
       apt: name={{ item }}
+      sudo: yes
       with_items:
         - python
         - python-setuptools
     - name: pelican
-      easy_install: pelican
+      easy_install: name=pelican
