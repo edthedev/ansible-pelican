@@ -28,16 +28,7 @@ Now make sure a copy of your blog has been fetched.::
 
 Setup your Editor
 ~~~~~~~~~~~~~~~~~~
-Copy your .vimrc file into the pelican-ansible directory.::
-
-  cd ansible-pelican
-  cp ~/.vimrc vimrc
-
-If you don't prefer Vim as your blog editor, you will want to modify vim.yml to add your prefered editor.::
-
-    nano vim.yml
-      with_items:
-        - nano 
+If you don't prefer Vim as your blog editor, you will want to manually install your prefered editor.
 
 You may also want to enable a graphical interface to the Virtual Machine.::
     
@@ -46,12 +37,17 @@ You may also want to enable a graphical interface to the Virtual Machine.::
         v.gui = true
       end
 
+Bring up the VM
+----------------
+
 Now create the Virtual Machine, will all Pelican requirements satisfied.::
 
     cd ansible-pelican
     vagrant up
     # This step will take a few minutes. Enjoy some tea.
 
+Do some blogging
+-----------------
 Now connect to the Virtual Machine and edit and publish your blog as usual.::
 
     cd ansible-pelican
