@@ -4,8 +4,8 @@
   gather_facts: False
   sudo: no
   vars:
-    - root_dir: /home/vagrant
-    - blog_repo: git@bitbucket.org:edthedev/blog.git
+    - username: vagrant
+    - home_dir: "/home/{{ username }}"
   tasks:
     - name: req for pelican
       apt: name={{ item }}
