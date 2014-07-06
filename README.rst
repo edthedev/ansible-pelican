@@ -9,6 +9,10 @@ Requires Vagrant_, VirtualBox_ and Ansible_.
 
 Steps
 ------
+
+Checkout your Blog from Git
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Check out this project with Git.::
 
     git clone https://github.com/edthedev/ansible-pelican.git
@@ -22,11 +26,19 @@ Now make sure a copy of your blog has been fetched.::
 
     git submodule foreach git pull origin master
 
-If you don't prefer Vim as your blog editor, you will want to modify editor.yml to add your prefered editor.::
+Setup your Editor
+~~~~~~~~~~~~~~~~~~
+Copy your .vimrc file into the pelican-ansible directory.::
 
-    vim editor.yml
+  cd ansible-pelican
+  cp ~/.vimrc vimrc
+
+If you don't prefer Vim as your blog editor, you will want to modify vim.yml to add your prefered editor.::
+
+    nano vim.yml
       with_items:
-        - gvim
+        - nano 
+
 You may also want to enable a graphical interface to the Virtual Machine.::
     
     vim Vagrantfile

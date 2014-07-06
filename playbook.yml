@@ -15,4 +15,4 @@
         - python-setuptools
     - name: pelican
       easy_install: name=pelican
-    - include: editor.yml
+    - include: vim.yml

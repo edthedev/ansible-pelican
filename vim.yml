@@ -4,3 +4,5 @@
   sudo: yes
   with_items:
     - vim
+- name: vimrc
+  file: src=vimrc dest=/home/vagrant/.vimrc
