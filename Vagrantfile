@@ -13,9 +13,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # v.memory = 4096
     # v.cpus = 2
-  config.vm.provider "virtualbox" do |v|
-    v.gui = true
-  end
+#  config.vm.provider "virtualbox" do |v|
+#    v.gui = true
+#  end
 
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook.yml"
