@@ -8,11 +8,14 @@
     - home_dir: "/home/{{ username }}"
   tasks:
     - name: req for pelican
-      apt: name={{ item }}
+      apt: name={{ item }} cache_valid_time=3600
       sudo: yes
       with_items:
         - python
         - python-setuptools
+        - make
+        - python-pip
     - name: pelican
-      easy_install: name=pelican
+      pip: name=pelican state=installed
+      sudo: yes
     - include: ansible-vim/vim.yml
