@@ -16,6 +16,9 @@
         - make
         - python-pip
     - name: pelican
-      pip: name=pelican state=installed
+      pip: name={{ item }} state=installed
+      with_items:
+        - pelican
+        - markdown
       sudo: yes
     - include: ansible-vim/vim.yml
