@@ -9,7 +9,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.box = "chef/centos-6.5"
   # config.vm.box = "chef/debian-7.4"
   config.vm.box = "hashicorp/precise32"
-  config.vm.network :forwarded_port, guest: 80, host: 8080
+# make serve, serves on 8000 by default in Pelican
+  config.vm.network :forwarded_port, guest: 8000, host: 8000
   config.vm.synced_folder "blog/", "/blog"
 
     # v.memory = 4096
